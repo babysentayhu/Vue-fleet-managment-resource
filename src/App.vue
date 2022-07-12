@@ -1,0 +1,185 @@
+<template>
+  <v-app id="inspire" >
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      dark
+      
+    >
+      <v-list-item >
+        <v-list-item-content color="primary" >
+          <v-list-item-title class="text-h6">
+            Fleet Managment
+          </v-list-item-title>
+          <v-list-item-subtitle>
+             Fleet Managment Admin Panel
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+      <v-list
+        dense
+        nav
+      >
+        <v-list-item
+          v-for="item in dash"
+          :key="item.title"
+          :to="item.to"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+    <v-list  
+      dense
+      nav
+    >
+      <v-list-group
+        v-for="item in items"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item
+          v-for="child in item.items"
+          :key="child.title"
+          :to="child.to"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
+    </v-list>
+    <v-list
+        dense
+        nav
+      >
+      <v-list-item
+          v-for="item in password"
+          :key="item.title"
+          :to="item.to"
+          v-model="item.active"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app  color="primary">
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title></v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-container fluid>
+
+      <!-- If using vue-router -->
+      <router-view></router-view>
+    </v-container>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        drawer:null,
+        right: null,
+        dash: [{ title: 'Dashboard', icon: 'mdi-monitor-dashboard', to: '/' }],
+        password: [{ title: 'Change Password', icon: 'mdi-lock', to: '/changePassword' }],
+        items: [
+        {
+          action: 'mdi-car-estate',
+          items: [{ title: 'Add Vehicle', to: '/vehicle' },{ title: 'Manage Vehicle', to: '/manageVehicle' }],
+          title: 'Vehicle',
+        },
+        {
+          action: 'mdi-account-hard-hat',
+          active: true,
+          items: [
+            { title: 'Add Driver',to: '/driver' },
+            { title: 'Manage Driver', to: '/manageDriver' },
+          ],
+          title: 'Driver',
+        },
+        {
+          action: 'mdi-clipboard-text',
+          active: true,
+          items: [
+            { title: 'Add Dispatch',to: '/booking' },
+            { title: 'Manage Dispatch', to: '/manageBooking' },
+          ],
+          title: 'Dispatch',
+        },
+        {
+          action: 'mdi-currency-usd',
+          active: true,
+          items: [
+            { title: 'Income Status',to: '/incomeExpenses' },
+            { title: 'Expenses Status', to: '/manageIncomeExpenses' },
+          ],
+          title: 'Transactions',
+        },
+        {
+          action: 'mdi-gas-station',
+          active: true,
+          items: [
+            { title: 'Add Fule',to: '/fule' },
+            { title: 'Fule Management', to: '/manageFule' },
+          ],
+          title: 'Fule',
+        },
+         {
+          action: 'mdi-account-cash',
+          active: true,
+          items: [
+            { title: 'Add Customer', to: '/customer' },
+            { title: 'Cusotmer Management', to: '/manageCustomer' },
+          ],
+          title: 'Customer',
+        },
+        
+        {
+          action: 'mdi-account',
+          active: true,
+          items: [
+            { title: 'Add User',to: '/user' },
+            { title: 'User Managment', to: '/manageUser' },
+          ],
+          title: 'Users',
+        },
+      ],
+      }
+    },
+  }
+</script>
+<style scoped>
+.v-list .v-list-item--active {
+    color: whitesmoke;
+}
+</style>

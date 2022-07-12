@@ -1,0 +1,145 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "vehicle": [
+    {
+      "vehicleName": "ISUZU-1",
+      "vehicleModel": "Model 1232",
+      "chassisNumber": "23455-123",
+      "vehicleColor": "White",
+      "fuleConsumption": "7 liter per KM",
+      "fuleType": "Diesel",
+      "vehicleType": "MINI-BUS",
+      "id": 1
+    },
+    {
+      "vehicleName": "ISUZU-2",
+      "vehicleModel": "Model-4567",
+      "chassisNumber": "234324-123-1232sd",
+      "vehicleColor": "Gray",
+      "fuleConsumption": "6 Lit per KM",
+      "fuleType": "Diesel",
+      "vehicleType": "ISUZU",
+      "id": 2
+    },
+    {
+      "vehicleName": "Sino",
+      "vehicleModel": "Model-232",
+      "chassisNumber": "2343-234",
+      "vehicleColor": "Red",
+      "fuleType": "Gasoline",
+      "fuleConsumption": "50 Liter",
+      "vehicleType": "ISUZU",
+      "id": 4
+    }
+  ],
+  "driver": [
+    {
+      "driverFirstName": "Abebe",
+      "driverLastName": "Kebede",
+      "mobileNumber": "0945632589",
+      "licenseNumber": "15482567",
+      "licenseExpDate": "23/5/2015",
+      "id": 1
+    },
+    {
+      "driverFirstName": "Zelalem",
+      "driverLastName": "Aelmu",
+      "mobileNumber": "0945632589",
+      "licenseNumber": "565645656",
+      "licenseExpDate": "23/5/2015",
+      "id": 2
+    },
+    {
+      "driverFirstName": "Bereket",
+      "driverLastName": "Belay",
+      "mobileNumber": "0945632589",
+      "licenseNumber": "565645656",
+      "licenseExpDate": "23/5/2015",
+      "id": 3
+    }
+  ],
+  "booking": [
+    {
+      
+      "driverName": "Gebeyw",
+      "vehicleName": "Sino",
+      "plateNumber": "45654",
+      "tripStartLocation": "Muger",
+      "tripStartDate": "23/5/2015",
+      "tripEndLocation": "Gorgora",
+      "tripEndDate": "2/6/2015",
+      "loadOrderNumber": "12",
+      "incomeDocument": "yes",
+      "distanceByLoad": "200",
+      "tripStatus": "Running",
+      "customer": "Kesadael",
+      "loadType": "Cement",
+      "loadSize": "345",
+      "tariff": "5000",
+      "tripCode": "34324",
+      "incomeCash": "345678",
+      "status": "Partially Paid",
+      "remainingPayment": "1000",
+      "fule": "565656",
+      "allowance": "450",
+      "loadingUnloading": "456",
+      "maintenance": "345",
+      "vehicleGurd": "2344",
+      "dealer": "676",
+      "laviyajo": "567",
+      "balanceKota": "3243",
+      "workflow": "5645",
+      "totalOperationalCost": "23434",
+      "prepaid": "454",
+      "month": "June",
+      "cpv": "5",
+      "document": "yes",
+      "remark": "done",
+      "id": 1
+    },
+    {
+      "driverName": "Web Egzer",
+      "tripStatus": "Yet To Start",
+      "status": "Full Paid",
+      "fule": "4588",
+      "allowance": "450",
+      "plateNumber": "45654",
+      "tripStartLocation": "Dangote",
+      "tripStartDate": "23/5/2015",
+      "tripEndLocation": "Addis Ababa",
+      "tripEndDate": "2/6/2015",
+      "customer": "Ayele",
+      "id": 2
+    },
+    {
+      "driverName": "Leuel",
+      "plateNumber": "45654",
+      "status": "Un Paid",
+      "fule": "600",
+      "allowance": "150",
+      "tripStatus": "Deliverd",
+      "tripStartLocation": "Gondor",
+      "tripStartDate": "23/5/2015",
+      "tripEndLocation": "Bahir Dar",
+      "tripEndDate": "2/6/2015",
+      "customer": "Adolam",
+      "id": 3
+    }
+  ]
+}
