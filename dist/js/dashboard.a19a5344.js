@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkfleet_managment"]=self["webpackChunkfleet_managment"]||[]).push([[966],{6512:function(e,n,t){t.r(n),t.d(n,{default:function(){return f}});var u=function(){var e=this,n=e._self._c;return n("div",[e._v(" This is the Dashboard ")])},l=[],a=t(3736),s={},r=(0,a.Z)(s,u,l,!1,null,null,null),f=r.exports}}]);
-//# sourceMappingURL=dashboard.a19a5344.js.map
