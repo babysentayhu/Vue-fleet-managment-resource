@@ -6,7 +6,7 @@
     elevation="17"
     >
         <v-row>
-            <v-col cols="4">
+            <v-col cols="3">
                 <v-card
                 max-width="344"
                 outlined
@@ -14,14 +14,14 @@
         <v-list-item three-line>
             <v-list-item-content>
             <div class="text-overline mb-4">
-                <v-list-item-title class="text-h5 mb-1">
+                <v-list-item-title class="text-h6 mb-1">
                 Total Vehicles
             </v-list-item-title>
             </div>
             <!-- <v-list-item-title class="text-h5 mb-1">
                 Total Vehicle
             </v-list-item-title> -->
-            <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+            <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
             <v-list-item-avatar
@@ -44,7 +44,7 @@
         </v-card-actions>
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="3">
                 <v-card
                 max-width="344"
                 outlined
@@ -52,14 +52,14 @@
         <v-list-item three-line>
             <v-list-item-content>
             <div class="text-overline mb-4">
-                <v-list-item-title class="text-h5 mb-1">
+                <v-list-item-title class="text-h6 mb-1">
                 Total Driver
             </v-list-item-title>
             </div>
             <!-- <v-list-item-title class="text-h5 mb-1">
                 Total Vehicle
             </v-list-item-title> -->
-            <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+            <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
             <v-list-item-avatar
@@ -82,29 +82,67 @@
         </v-card-actions>
                 </v-card>
             </v-col>
-            <v-col cols="4">
+             <v-col cols="3">
                 <v-card
-        max-width="344"
-        outlined
-        >
+                max-width="344"
+                outlined
+                >
         <v-list-item three-line>
             <v-list-item-content>
             <div class="text-overline mb-4">
-                <v-list-item-title class="text-h5 mb-1">
-                Total Customer
+                <v-list-item-title class="text-h6 mb-1">
+                Total Driver
             </v-list-item-title>
             </div>
             <!-- <v-list-item-title class="text-h5 mb-1">
                 Total Vehicle
             </v-list-item-title> -->
-            <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+            <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
             <v-list-item-avatar
             color="primary"
             size="110"
             > <v-icon dark x-large>
-            mdi-account-cash
+            mdi-account-hard-hat
+            </v-icon>
+            </v-list-item-avatar>
+        </v-list-item>
+
+        <v-card-actions>
+            <v-btn
+            outlined
+            rounded
+            text
+            >
+            View
+            </v-btn>
+        </v-card-actions>
+                </v-card>
+            </v-col>
+            <v-col cols="3">
+            <v-card
+            max-width="344"
+            outlined
+            >
+            <v-list-item three-line>
+            <v-list-item-content>
+            <div class="text-overline mb-4">
+                <v-list-item-title class="text-h6 mb-1">
+                Monthly Income
+            </v-list-item-title>
+            </div>
+            <!-- <v-list-item-title class="text-h5 mb-1">
+                Total Vehicle
+            </v-list-item-title> -->
+            <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
+            </v-list-item-content>
+
+            <v-list-item-avatar
+            color="primary"
+            size="110"
+            > <v-icon dark x-large>
+            mdi-cash
             </v-icon>
             </v-list-item-avatar>
         </v-list-item>
@@ -123,33 +161,36 @@
         </v-row>
     </v-card>
     <br/><br/><br/><br/>
-    <v-card
-    elevation="10"
-    >
+    <MonthlyIncomeGraphVue />
         <v-row>
             <v-col cols="6">
                 <v-card>
-                    <v-card-title>Today Dispatch</v-card-title>
+                    <v-card-title>Driver License Near to Expire</v-card-title>
+                    <v-divider></v-divider>
                     <v-card-text>
                         <v-simple-table>
                         <template v-slot:default>
                         <thead>
                             <tr>
                             <th class="text-left">
-                                Name
+                                Driver Name
                             </th>
                             <th class="text-left">
-                                Calories
+                                Mobile No
+                            </th>
+                            <th class="text-left">
+                                License Exp Date
                             </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr
-                            v-for="item in desserts"
+                            v-for="item in driverLicneseExpDate"
                             :key="item.name"
                             >
                             <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
+                            <td>{{ item.mobileNo }}</td>
+                            <td>{{ item.expDate }}</td>
                             </tr>
                         </tbody>
                         </template>
@@ -159,27 +200,32 @@
             </v-col>
             <v-col cols="6">
                 <v-card>
-                    <v-card-title>Weakly Income</v-card-title>
+                    <v-card-title>Vehicle Insurance Near to Expire</v-card-title>
+                    <v-divider></v-divider>
                     <v-card-text>
                         <v-simple-table>
                         <template v-slot:default>
                         <thead>
                             <tr>
                             <th class="text-left">
-                                Name
+                                Vehicle
                             </th>
                             <th class="text-left">
-                                Calories
+                                Plate NO
+                            </th>
+                            <th class="text-left">
+                                Expire Date
                             </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr
-                            v-for="item in desserts"
+                            v-for="item in vehicleInsuranceExpDate"
                             :key="item.name"
                             >
                             <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
+                            <td>{{ item.plateNo }}</td>
+                            <td>{{ item.expDate }}</td>
                             </tr>
                         </tbody>
                         </template>
@@ -188,53 +234,48 @@
                 </v-card>
             </v-col>
         </v-row>
-    </v-card>
     </div>
 </template>
 <script>
+import MonthlyIncomeGraphVue from './MonthlyIncomeGraph.vue'
   export default {
+    components:{
+        MonthlyIncomeGraphVue,
+    },
     data () {
       return {
-        desserts: [
+        driverLicneseExpDate: [
           {
-            name: 'Frozen Yogurt',
-            calories: 159,
+            name: 'Abebe Kebede',
+            mobileNo:'0911234567',
+            expDate: '2/7/2022',
           },
           {
-            name: 'Ice cream sandwich',
-            calories: 237,
+            name: 'Zelalem Mola',
+            mobileNo:'0956234567',
+            expDate: '12/10/2022',
           },
           {
-            name: 'Eclair',
-            calories: 262,
+            name: 'Solomon Terfe',
+            mobileNo:'0916234567',
+            expDate: '11/12/2022',
+          },
+        ],
+        vehicleInsuranceExpDate: [
+          {
+            name: 'ISUZU',
+            plateNo:'AA-A12345',
+            expDate: '2/7/2022',
           },
           {
-            name: 'Cupcake',
-            calories: 305,
+            name: 'SINO',
+            plateNo:'OR-A45578',
+            expDate: '12/10/2022',
           },
           {
-            name: 'Gingerbread',
-            calories: 356,
-          },
-          {
-            name: 'Jelly bean',
-            calories: 375,
-          },
-          {
-            name: 'Lollipop',
-            calories: 392,
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
+            name: 'FSR',
+            plateNo:'SP-A23679',
+            expDate: '11/12/2022',
           },
         ],
       }

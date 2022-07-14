@@ -199,6 +199,19 @@
             
           ></v-select>
           </v-col>
+          <v-col
+            cols="12"
+            sm="6"
+            md="3"
+          >
+          <v-select
+            :items="['Single Trip','Round Trip']"
+            label="የጉዞ አይነት"
+            :rules="[(v) => !!v || 'የጉዞ አይነት ያስፈልጋል']"
+            outlined
+            
+          ></v-select>
+          </v-col>
       </v-row>
       <v-divider></v-divider>
 
