@@ -102,6 +102,15 @@ import Layout from "./layout/Layout.vue";
           ],
           title: 'Users',
         },
+        {
+          action: 'mdi-cog-outline',
+          active: true,
+          items: [
+            { title: 'Route Configuration',to: '/routeConfig' },
+            { title: 'Fuel Configuration', to: '/fuelConfig' },
+          ],
+          title: 'Configuration',
+        },
       ],
       }
     },

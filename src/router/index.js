@@ -137,14 +137,28 @@ const routes = [
     name: "user",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "user" */ "../components/User/AddUser.vue"),
+      import("../components/User/AddUser.vue"),
   },
   {
     path: "/manageUser",
     name: "manageUser",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "manageUser" */ "../components/User/ManageUser.vue"),
+      import("../components/User/ManageUser.vue"),
+  },
+  {
+    path: "/routeConfig",
+    name: "routeConfig",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Config/RouteConfig.vue"),
+  },
+  {
+    path: "/fuelConfig",
+    name: "fuelConfig",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Config/FuelConfig.vue"),
   },
   {
     path: "/changePassword",

@@ -87,6 +87,7 @@
             placeholder="Fule Price per Litter"
             v-model="vehicle.vehicleColor"
             :rules="[(v) => !!v || 'Fule Price per Litter is required']"
+            disabled
             outlined
           ></v-text-field>
         </v-col>
