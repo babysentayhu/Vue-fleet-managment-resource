@@ -18,9 +18,9 @@
                 Total Vehicles
             </v-list-item-title>
             </div>
-            <!-- <v-list-item-title class="text-h5 mb-1">
-                Total Vehicle
-            </v-list-item-title> -->
+            <v-list-item-title class="text-h3 mb-1">
+                11
+            </v-list-item-title>
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
@@ -56,9 +56,9 @@
                 Total Driver
             </v-list-item-title>
             </div>
-            <!-- <v-list-item-title class="text-h5 mb-1">
-                Total Vehicle
-            </v-list-item-title> -->
+            <v-list-item-title class="text-h3 mb-1">
+                23
+            </v-list-item-title>
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
@@ -82,21 +82,21 @@
         </v-card-actions>
                 </v-card>
             </v-col>
-             <v-col cols="3">
+            <v-col cols="3">
                 <v-card
                 max-width="344"
                 outlined
                 >
-        <v-list-item three-line>
+            <v-list-item three-line>
             <v-list-item-content>
             <div class="text-overline mb-4">
                 <v-list-item-title class="text-h6 mb-1">
-                Total Driver
+                Total Customer
             </v-list-item-title>
             </div>
-            <!-- <v-list-item-title class="text-h5 mb-1">
-                Total Vehicle
-            </v-list-item-title> -->
+            <v-list-item-title class="text-h3 mb-1">
+                40
+            </v-list-item-title>
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
@@ -104,7 +104,7 @@
             color="primary"
             size="110"
             > <v-icon dark x-large>
-            mdi-account-hard-hat
+            mdi-account-cash
             </v-icon>
             </v-list-item-avatar>
         </v-list-item>
@@ -132,9 +132,9 @@
                 Monthly Income
             </v-list-item-title>
             </div>
-            <!-- <v-list-item-title class="text-h5 mb-1">
-                Total Vehicle
-            </v-list-item-title> -->
+            <v-list-item-title class="text-h4 mb-1">
+               23560 ETB
+            </v-list-item-title>
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 

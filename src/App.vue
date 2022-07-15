@@ -78,10 +78,10 @@ import Layout from "./layout/Layout.vue";
           action: 'mdi-gas-station',
           active: true,
           items: [
-            { title: 'Add Fule',to: '/fule' },
-            { title: 'Fule Management', to: '/manageFule' },
+            { title: 'Add Fuel',to: '/fule' },
+            { title: 'Fuel Management', to: '/manageFule' },
           ],
-          title: 'Fule',
+          title: 'Fuel',
         },
          {
           action: 'mdi-account-cash',

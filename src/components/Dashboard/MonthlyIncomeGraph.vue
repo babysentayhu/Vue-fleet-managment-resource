@@ -28,37 +28,17 @@
     <v-col cols="6">
     <v-card
     class="mx-auto text-center"
-    color="primary"
+    color="blue lighten-4"
     dark
     max-width="1000"
     >
     <v-card-text>
-      <v-sheet color="rgba(0, 0, 0, .12)">
-        <v-sparkline
-          :value="value"
-          color="rgba(255, 255, 255, .7)"
-          height="100"
-          padding="24"
-          
-          smooth
-        >
-          <template v-slot:label="item">
-            {{ item.value }} ETB
-          </template>
-        </v-sparkline>
-      </v-sheet>
+      <WeeklyIncomePieChartVue />
     </v-card-text>
-
-    <!-- <v-card-text>
-      <div class="text-h4 font-weight-thin">
-        Income in the Last Week
-      </div>
-    </v-card-text> -->
-
     <v-divider></v-divider>
 
     <v-card-actions class="justify-center">
-      <div class="text-h6 font-weight-bold">
+      <div class="text-h6 font-weight-bold" color="#00838F">
         Income in the Last Week
       </div>
     </v-card-actions>
@@ -69,6 +49,7 @@
 </template>
 <script>
 import { Bar } from 'vue-chartjs/legacy'
+import WeeklyIncomePieChartVue from './WeeklyIncomePieChart.vue'
 import {
   Chart as ChartJS,
   Title,
@@ -82,7 +63,8 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 export default {
     components: {
-        Bar
+        Bar,
+        WeeklyIncomePieChartVue
     },
     props: {
         chartId: {
@@ -116,15 +98,7 @@ export default {
     },
     data(){
         return {
-            value: [
-                423,
-                446,
-                675,
-                510,
-                590,
-                610,
-                760,
-            ],
+           
             chartData: {
                 labels: [
                 'January',
