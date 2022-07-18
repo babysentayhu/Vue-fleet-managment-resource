@@ -3,8 +3,8 @@
 <div>
   <v-card>
     <v-card-title>
-      Manage Income
-      <v-spacer></v-spacer>
+      
+      
      
       <v-row>
         <v-col cols="6">
@@ -276,6 +276,7 @@
                  <v-text-field
                   label="Total Payment"
                   v-model="detail2.totalPayment"
+                  disabled
                   
                 ></v-text-field>
               </v-col>
@@ -287,7 +288,7 @@
                  <v-text-field
                   label="Paid Amount"
                   v-model="detail2.paidAmount"
-                  
+                  disabled
                 ></v-text-field>
               </v-col>
               <v-col
@@ -298,12 +299,22 @@
                  <v-text-field
                   label="Remaining Payment"
                   v-model="detail2.remainingPayment"
-                  
+                  disabled
                 ></v-text-field>
               </v-col>
               <v-col
                 cols="12"
                 sm="6"
+                md="4"
+              >
+                 <v-text-field
+                  label="Amount To Pay"
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
               >
                 <v-select
                   :items="['Paid', 'Not Fully Paid', 'Not Paid']"
@@ -315,6 +326,7 @@
               <v-col
                 cols="12"
                 sm="6"
+                md="4"
               >
                 <v-autocomplete
                   :items="['Yet to start', 'Running', 'Delivered']"

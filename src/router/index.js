@@ -30,21 +30,21 @@ const routes = [
   },
   {
     path: "/dashboard",
-    name: "dashboard",
+    name: "Dashboard",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../components/Dashboard/DashboardView.vue"),
   },
   {
     path: "/vehicle",
-    name: "vehicle",
+    name: "Vehicle",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../views/Vehicle/VehicleView.vue"),
   },
   {
     path: "/manageVehicle",
-    name: "manageVehicle",
+    name: "Manage Vehicle",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../views/Vehicle/ManageVehicle.vue"),
@@ -57,112 +57,140 @@ const routes = [
   },
   {
     path: "/driver",
-    name: "driver",
+    name: "Driver",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../views/Driver/DriverView.vue"),
   },
   {
     path: "/manageDriver",
-    name: "manageDriver",
+    name: "Manage Driver",
     // beforeEnter : guardMyroute,
     component: () =>
       import(/* webpackChunkName: "manageDriver" */ "../components/Driver/ManageDriver.vue"),
   },
   {
     path: "/booking",
-    name: "booking",
+    name: "Add Dispatch",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "booking" */ "../components/Booking/AddBooking.vue"),
+      import("../components/Dispatch/AddBooking.vue"),
   },
   {
     path: "/manageBooking",
-    name: "manageBooking",
+    name: "Manage Dispatch",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "manageBooking" */ "../components/Booking/ManageBooking.vue"),
+      import("../components/Dispatch/ManageBooking.vue"),
   },
   {
     path: "/bookingDetail/:id",
     name: "booking-details",
     // beforeEnter : guardMyroute,
-    component: () => import("../components/Booking/BookingEdit.vue")
+    component: () => import("../components/Dispatch/BookingEdit.vue")
   },
   {
     path: "/fule",
-    name: "fule",
+    name: "Add Fuel",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "fule" */ "../components/Fule/AddFule.vue"),
+      import("../components/Fule/AddFule.vue"),
   },
  
   {
     path: "/manageFule",
-    name: "manageFule",
+    name: "Manage Fuel",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "manageFule" */ "../components/Fule/ManageFule.vue"),
+      import("../components/Fule/ManageFule.vue"),
   },
   {
     path: "/customer",
-    name: "customer",
+    name: "Customer",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "customer" */ "../components/Customer/AddCustomer.vue"),
+      import("../components/Customer/AddCustomer.vue"),
   },
   {
     path: "/manageCustomer",
-    name: "manageCustomer",
+    name: "Manage Customer",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "manageCustomer" */ "../components/Customer/ManageCustomer.vue"),
+      import("../components/Customer/ManageCustomer.vue"),
   },
   {
     path: "/incomeExpenses",
-    name: "incomeExpenses",
+    name: "Manage Income",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "incomeExpenses" */ "../components/IncomeExpenses/AddIncomeExpenses.vue"),
+      import("../components/IncomeExpenses/AddIncomeExpenses.vue"),
   },
   {
     path: "/manageIncomeExpenses",
-    name: "manageIncomeExpenses",
+    name: "Manage Expense",
     // beforeEnter : guardMyroute,
     component: () =>
-      import(/* webpackChunkName: "manageIncomeExpenses" */ "../components/IncomeExpenses/ManageIncomeExpenses.vue"),
+      import("../components/IncomeExpenses/ManageIncomeExpenses.vue"),
+  },
+  {
+    path: "/incomeExpenseReport",
+    name: "Income & Expense Report",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Report/IncomeExpenseReport.vue"),
+  },
+  {
+    path: "/incomeReport",
+    name: "incomeReport",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Report/IncomeReport.vue"),
+  },
+  {
+    path: "/expenseReport",
+    name: "expenseReport",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Report/ExpenseReport.vue"),
   },
   {
     path: "/user",
-    name: "user",
+    name: "Add User",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../components/User/AddUser.vue"),
   },
   {
     path: "/manageUser",
-    name: "manageUser",
+    name: "Manage User",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../components/User/ManageUser.vue"),
   },
   {
     path: "/routeConfig",
-    name: "routeConfig",
+    name: "Route Configuration",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../components/Config/RouteConfig.vue"),
   },
   {
     path: "/fuelConfig",
-    name: "fuelConfig",
+    name: "Fuel Configuration",
     // beforeEnter : guardMyroute,
     component: () =>
       import("../components/Config/FuelConfig.vue"),
   },
   {
+    path: "/vehicleTypeConfig",
+    name: "Vehicle Type Configuration",
+    // beforeEnter : guardMyroute,
+    component: () =>
+      import("../components/Config/VehicleTypeConfig.vue"),
+  },
+  {
     path: "/changePassword",
-    name: "changePassword",
+    name: "Change Password",
     // beforeEnter : guardMyroute,
     component: () =>
       import(/* webpackChunkName: "changePassword" */ "../components/User/ChangePassword.vue"),

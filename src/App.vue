@@ -11,7 +11,7 @@
       </v-navigation-drawer>
       <v-app-bar app  color="primary">
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title></v-toolbar-title>
+        <v-toolbar-title>{{$route.name}}</v-toolbar-title>
         <v-spacer></v-spacer>
 
        <v-btn icon :to="{name: 'login'}">
@@ -43,13 +43,12 @@ import Layout from "./layout/Layout.vue";
         password: [{ title: 'Change Password', icon: 'mdi-lock', to: '/changePassword' }],
         items: [
         {
-          action: 'mdi-car-estate',
+          action: 'mdi-rv-truck',
           items: [{ title: 'Add Vehicle', to: '/vehicle' },{ title: 'Manage Vehicle', to: '/manageVehicle' }],
           title: 'Vehicle',
         },
         {
           action: 'mdi-account-hard-hat',
-          active: true,
           items: [
             { title: 'Add Driver',to: '/driver' },
             { title: 'Manage Driver', to: '/manageDriver' },
@@ -58,7 +57,6 @@ import Layout from "./layout/Layout.vue";
         },
         {
           action: 'mdi-clipboard-text',
-          active: true,
           items: [
             { title: 'Add Dispatch',to: '/booking' },
             { title: 'Manage Dispatch', to: '/manageBooking' },
@@ -67,7 +65,6 @@ import Layout from "./layout/Layout.vue";
         },
         {
           action: 'mdi-currency-usd',
-          active: true,
           items: [
             { title: 'Income Status',to: '/incomeExpenses' },
             { title: 'Expenses Status', to: '/manageIncomeExpenses' },
@@ -76,26 +73,32 @@ import Layout from "./layout/Layout.vue";
         },
         {
           action: 'mdi-gas-station',
-          active: true,
           items: [
             { title: 'Add Fuel',to: '/fule' },
             { title: 'Fuel Management', to: '/manageFule' },
           ],
           title: 'Fuel',
         },
-         {
+        {
           action: 'mdi-account-cash',
-          active: true,
           items: [
             { title: 'Add Customer', to: '/customer' },
             { title: 'Cusotmer Management', to: '/manageCustomer' },
           ],
           title: 'Customer',
         },
+        {
+          action: 'mdi-file-document-multiple',
+          items: [
+            { title: 'Income & Expense Report', to: '/incomeExpenseReport' },
+            // { title: 'Income Report', to: '/incomeReport' },
+            // { title: 'Expense Report', to: '/expenseReport' },
+          ],
+          title: 'Report',
+        },
         
         {
           action: 'mdi-account',
-          active: true,
           items: [
             { title: 'Add User',to: '/user' },
             { title: 'User Managment', to: '/manageUser' },
@@ -104,10 +107,10 @@ import Layout from "./layout/Layout.vue";
         },
         {
           action: 'mdi-cog-outline',
-          active: true,
           items: [
             { title: 'Route Configuration',to: '/routeConfig' },
             { title: 'Fuel Configuration', to: '/fuelConfig' },
+            { title: 'Vehicle Type Configuration', to: '/vehicleTypeConfig' },
           ],
           title: 'Configuration',
         },

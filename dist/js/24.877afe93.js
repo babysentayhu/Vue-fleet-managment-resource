@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfleet_managment"]=self["webpackChunkfleet_managment"]||[]).push([[24],{2024:function(n,e,t){t.r(e),t.d(e,{default:function(){return s}});var u=function(){var n=this,e=n._self._c;return e("div")},l=[],a=t(3736),f={},r=(0,a.Z)(f,u,l,!1,null,null,null),s=r.exports}}]);
+//# sourceMappingURL=24.877afe93.js.map

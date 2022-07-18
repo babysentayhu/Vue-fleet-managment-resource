@@ -3,10 +3,14 @@
     <v-list-item >
         <v-list-item-content color="primary" >
           <v-list-item-title class="text-h6">
-            Fleet Managment
+            <v-img
+              
+              max-width="200"
+              src="../../assets/logo.jpg"
+            ></v-img>
           </v-list-item-title>
           <v-list-item-subtitle>
-             Fleet Managment Admin Panel
+             KISADAEL Fleet Managment
           </v-list-item-subtitle>
         </v-list-item-content>
     </v-list-item>

@@ -1,7 +1,7 @@
 <template>
 <div>
      <v-breadcrumbs>
-    <h2>Dashboard</h2></v-breadcrumbs>
+   </v-breadcrumbs>
     <v-card
     elevation="17"
     >
