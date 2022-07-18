@@ -7,53 +7,63 @@
     >
         <v-row>
             <v-col cols="3">
-                <v-card
+            <v-card
                 max-width="344"
+               
                 outlined
                 >
-        <v-list-item three-line>
-            <v-list-item-content>
-            <div class="text-overline mb-4">
-                <v-list-item-title class="text-h6 mb-1">
-                Total Vehicles
-            </v-list-item-title>
-            </div>
-            <v-list-item-title class="text-h3 mb-1">
-                11
-            </v-list-item-title>
-            <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
-            </v-list-item-content>
+                <v-list-item three-line>
+                    <v-list-item-avatar
+                        color="primary"
+                        size="80"
+                        > <v-icon dark large>
+                        mdi-car-estate
+                        </v-icon>
+                    </v-list-item-avatar>
+                    <v-list-item-content>
+                    <div class="text-overline mb-4">
+                        <v-list-item-title class="text-h6 mb-1">
+                        Vehicles
+                        </v-list-item-title>
+                    </div>
+                    <v-list-item-title class="text-h3 mb-1">
+                        11
+                    </v-list-item-title>
+                    <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
+                    </v-list-item-content>
 
-            <v-list-item-avatar
-            color="primary"
-            size="110"
-            > <v-icon dark x-large>
-            mdi-car-estate
-            </v-icon>
-            </v-list-item-avatar>
-        </v-list-item>
+                    
+                </v-list-item>
 
-        <v-card-actions>
-            <v-btn
-            outlined
-            rounded
-            text
-            >
-            View
-            </v-btn>
-        </v-card-actions>
+                <v-card-actions>
+                    <v-btn
+                    outlined
+                    rounded
+                    text
+                    :to="{path: '/manageVehicle'}"
+                    >
+                    View
+                    </v-btn>
+                </v-card-actions>
                 </v-card>
             </v-col>
             <v-col cols="3">
-                <v-card
+            <v-card
                 max-width="344"
                 outlined
                 >
         <v-list-item three-line>
+            <v-list-item-avatar
+            color="primary"
+            size="80"
+            > <v-icon dark x-large>
+            mdi-account-hard-hat
+            </v-icon>
+            </v-list-item-avatar>
             <v-list-item-content>
             <div class="text-overline mb-4">
                 <v-list-item-title class="text-h6 mb-1">
-                Total Driver
+                 Driver
             </v-list-item-title>
             </div>
             <v-list-item-title class="text-h3 mb-1">
@@ -62,13 +72,7 @@
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
-            <v-list-item-avatar
-            color="primary"
-            size="110"
-            > <v-icon dark x-large>
-            mdi-account-hard-hat
-            </v-icon>
-            </v-list-item-avatar>
+            
         </v-list-item>
 
         <v-card-actions>
@@ -76,6 +80,7 @@
             outlined
             rounded
             text
+            :to="{path: '/manageDriver'}"
             >
             View
             </v-btn>
@@ -88,10 +93,17 @@
                 outlined
                 >
             <v-list-item three-line>
+            <v-list-item-avatar
+            color="primary"
+            size="80"
+            > <v-icon dark x-large>
+            mdi-account-cash
+            </v-icon>
+            </v-list-item-avatar>
             <v-list-item-content>
             <div class="text-overline mb-4">
                 <v-list-item-title class="text-h6 mb-1">
-                Total Customer
+                Customer
             </v-list-item-title>
             </div>
             <v-list-item-title class="text-h3 mb-1">
@@ -100,13 +112,7 @@
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
-            <v-list-item-avatar
-            color="primary"
-            size="110"
-            > <v-icon dark x-large>
-            mdi-account-cash
-            </v-icon>
-            </v-list-item-avatar>
+            
         </v-list-item>
 
         <v-card-actions>
@@ -114,6 +120,7 @@
             outlined
             rounded
             text
+            :to="{path: '/manageCustomer'}"
             >
             View
             </v-btn>
@@ -126,6 +133,13 @@
             outlined
             >
             <v-list-item three-line>
+            <v-list-item-avatar
+            color="primary"
+            size="80"
+            > <v-icon dark x-large>
+            mdi-cash
+            </v-icon>
+            </v-list-item-avatar>
             <v-list-item-content>
             <div class="text-overline mb-4">
                 <v-list-item-title class="text-h6 mb-1">
@@ -138,13 +152,7 @@
             <!-- <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle> -->
             </v-list-item-content>
 
-            <v-list-item-avatar
-            color="primary"
-            size="110"
-            > <v-icon dark x-large>
-            mdi-cash
-            </v-icon>
-            </v-list-item-avatar>
+           
         </v-list-item>
 
         <v-card-actions>
@@ -152,6 +160,7 @@
             outlined
             rounded
             text
+            :to="{path: '/incomeExpenseReport'}"
             >
             View
             </v-btn>

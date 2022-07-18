@@ -23,7 +23,6 @@
           sm="6"
          
         >
-       
         <v-card>
             <v-card-title>ጠቅላላ የተሽከርካሪ የአሽከርካሪ አና የጉዞ መረጃ!</v-card-title>
             <v-divider></v-divider>
