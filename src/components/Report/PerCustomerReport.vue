@@ -1,6 +1,11 @@
 <template>
     <div>
-        <v-simple-table>
+        <v-btn @click="printCutomer">
+        <v-icon small
+        class="mr-2">
+        mdi-printer</v-icon>Print
+        </v-btn>
+        <v-simple-table id="printCutomer">
         <template v-slot:default>
         <thead>
             <tr>
@@ -66,6 +71,12 @@ export default {
                     totalExpense:'1238 ETB',
                 },
             ],
+        }
+    },
+    methods:{ 
+        async printCutomer () {
+        // Pass the element id here
+        await this.$htmlToPaper('printCutomer');
         }
     }
 }

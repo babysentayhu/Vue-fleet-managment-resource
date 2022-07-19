@@ -88,6 +88,18 @@
             outlined
           ></v-text-field>
         </v-col>
+         <v-col
+          cols="12"
+          sm="6"
+          md="3"
+        >
+          <v-text-field
+            label="Trailer Number"
+            placeholder="Trailer Number"
+            :rules="[(v) => !!v || 'Trailer Number is required']"
+            outlined
+          ></v-text-field>
+        </v-col>
         <v-col
           cols="12"
           sm="6"
