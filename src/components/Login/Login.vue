@@ -106,13 +106,17 @@ export default {
     },
     methods: {
         validate() {
-        if (this.$refs.loginForm.validate()) {
-            // submit form to server/API here...
-            //  this.$store.commit("setAuthentication", true);
-            //  console.log("test")
-            //  console.log(this.$store.state.isAuthenticated)
-             this.$router.push('dashboard');
-        }
+        // if (this.$refs.loginForm.validate()) {
+        //     // submit form to server/API here...
+        //     //  this.$store.commit("setAuthentication", true);
+        //     //  console.log("test")
+        //     //  console.log(this.$store.state.isAuthenticated)
+        //      this.$router.push('dashboard');
+        // }
+        this.$store.dispatch('setAuthentication',true)
+        // this.$store.state.isAuthenticated = true
+        // console.log(this.$store.state.isAuthenticated)
+        this.$router.push('dashboard');
         },
         reset() {
         this.$refs.form.reset();

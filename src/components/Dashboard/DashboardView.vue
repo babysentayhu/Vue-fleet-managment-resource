@@ -23,7 +23,7 @@
                     <v-list-item-content>
                     <div class="text-overline mb-4">
                         <v-list-item-title class="text-h6 mb-1">
-                        Vehicles
+                        Vehicles {{$store.state.isAuthenticated}}
                         </v-list-item-title>
                     </div>
                     <v-list-item-title class="text-h3 mb-1">

@@ -14,7 +14,7 @@
         <v-toolbar-title>{{$route.name}}</v-toolbar-title>
         <v-spacer></v-spacer>
 
-       <v-btn icon :to="{name: 'login'}">
+       <v-btn icon @click="logout">
             <v-icon>  mdi-logout </v-icon>
         </v-btn>
         
@@ -117,6 +117,12 @@ import Layout from "./layout/Layout.vue";
       ],
       }
     },
+    methods:{
+      logout(){
+        this.$store.dispatch('setAuthentication',false)
+        this.$router.push('/');
+      }
+    }
   }
 </script>
 <style scoped>
